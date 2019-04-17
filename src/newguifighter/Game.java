@@ -5,6 +5,8 @@
  */
 package newguifighter;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author arias
@@ -27,22 +29,218 @@ public class Game extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rdgWarriorType1 = new javax.swing.ButtonGroup();
+        rdgWarriorType2 = new javax.swing.ButtonGroup();
+        panSetup = new javax.swing.JPanel();
+        panArmy1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtLordName1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstUnits1 = new javax.swing.JList<>();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        rdbPaladin1 = new javax.swing.JRadioButton();
+        rdbFighter1 = new javax.swing.JRadioButton();
+        rdbRanger1 = new javax.swing.JRadioButton();
+        cmdChangeWarrior1 = new javax.swing.JButton();
+        panArmy2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txtLordName2 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        lstUnits2 = new javax.swing.JList<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        rdbPaladin2 = new javax.swing.JRadioButton();
+        cmdChangeWarrior2 = new javax.swing.JButton();
+        rdbFighter2 = new javax.swing.JRadioButton();
+        rdbRanger2 = new javax.swing.JRadioButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Fighter Game");
+
+        panSetup.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Setup Game"));
+        panSetup.setLayout(new javax.swing.BoxLayout(panSetup, javax.swing.BoxLayout.X_AXIS));
+
+        panArmy1.setBorder(javax.swing.BorderFactory.createTitledBorder("Army 1"));
+
+        jLabel1.setLabelFor(txtLordName1);
+        jLabel1.setText("Lord's Name:");
+
+        jScrollPane1.setViewportView(lstUnits1);
+
+        jLabel3.setText("Army's Units:");
+
+        jLabel5.setText("Select your Warrior Type:");
+
+        rdgWarriorType1.add(rdbPaladin1);
+        rdbPaladin1.setText("Paladin");
+
+        rdgWarriorType1.add(rdbFighter1);
+        rdbFighter1.setText("Fighter");
+
+        rdgWarriorType1.add(rdbRanger1);
+        rdbRanger1.setText("Ranger");
+
+        cmdChangeWarrior1.setText("Change Selected Warrior");
+
+        javax.swing.GroupLayout panArmy1Layout = new javax.swing.GroupLayout(panArmy1);
+        panArmy1.setLayout(panArmy1Layout);
+        panArmy1Layout.setHorizontalGroup(
+            panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panArmy1Layout.createSequentialGroup()
+                .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panArmy1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(panArmy1Layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtLordName1))
+                                .addGroup(panArmy1Layout.createSequentialGroup()
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(rdbFighter1)
+                                        .addComponent(rdbPaladin1)
+                                        .addComponent(rdbRanger1))
+                                    .addGap(99, 99, 99)))
+                            .addGroup(panArmy1Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5))))
+                    .addComponent(cmdChangeWarrior1))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panArmy1Layout.setVerticalGroup(
+            panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panArmy1Layout.createSequentialGroup()
+                .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtLordName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGroup(panArmy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panArmy1Layout.createSequentialGroup()
+                        .addComponent(rdbPaladin1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdbFighter1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdbRanger1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmdChangeWarrior1)
+                .addGap(20, 20, 20))
+        );
+
+        panSetup.add(panArmy1);
+
+        panArmy2.setBorder(javax.swing.BorderFactory.createTitledBorder("Army 2"));
+
+        jLabel2.setLabelFor(txtLordName2);
+        jLabel2.setText("Lord's Name:");
+
+        txtLordName2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLordName2ActionPerformed(evt);
+            }
+        });
+
+        jScrollPane2.setViewportView(lstUnits2);
+
+        jLabel4.setText("Army's Units:");
+
+        jLabel6.setText("Select your Warrior Type:");
+
+        rdgWarriorType2.add(rdbPaladin2);
+        rdbPaladin2.setText("Paladin");
+
+        cmdChangeWarrior2.setText("Change Selected Warrior");
+
+        rdgWarriorType2.add(rdbFighter2);
+        rdbFighter2.setText("Fighter");
+
+        rdgWarriorType2.add(rdbRanger2);
+        rdbRanger2.setText("Ranger");
+
+        javax.swing.GroupLayout panArmy2Layout = new javax.swing.GroupLayout(panArmy2);
+        panArmy2.setLayout(panArmy2Layout);
+        panArmy2Layout.setHorizontalGroup(
+            panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panArmy2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panArmy2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtLordName2))
+                    .addGroup(panArmy2Layout.createSequentialGroup()
+                        .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panArmy2Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6))
+                            .addGroup(panArmy2Layout.createSequentialGroup()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rdbFighter2)
+                                    .addComponent(rdbPaladin2)
+                                    .addComponent(rdbRanger2))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(panArmy2Layout.createSequentialGroup()
+                .addComponent(cmdChangeWarrior2)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panArmy2Layout.setVerticalGroup(
+            panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panArmy2Layout.createSequentialGroup()
+                .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtLordName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panArmy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(panArmy2Layout.createSequentialGroup()
+                        .addComponent(rdbPaladin2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rdbFighter2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdbRanger2)
+                        .addGap(6, 6, 6))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmdChangeWarrior2)
+                .addGap(0, 20, Short.MAX_VALUE))
+        );
+
+        panSetup.add(panArmy2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panSetup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panSetup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtLordName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLordName2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLordName2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,6 +277,33 @@ public class Game extends javax.swing.JFrame {
         });
     }
 
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdChangeWarrior1;
+    private javax.swing.JButton cmdChangeWarrior2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JList<String> lstUnits1;
+    private javax.swing.JList<String> lstUnits2;
+    private javax.swing.JPanel panArmy1;
+    private javax.swing.JPanel panArmy2;
+    private javax.swing.JPanel panSetup;
+    private javax.swing.JRadioButton rdbFighter1;
+    private javax.swing.JRadioButton rdbFighter2;
+    private javax.swing.JRadioButton rdbPaladin1;
+    private javax.swing.JRadioButton rdbPaladin2;
+    private javax.swing.JRadioButton rdbRanger1;
+    private javax.swing.JRadioButton rdbRanger2;
+    private javax.swing.ButtonGroup rdgWarriorType1;
+    private javax.swing.ButtonGroup rdgWarriorType2;
+    private javax.swing.JTextField txtLordName1;
+    private javax.swing.JTextField txtLordName2;
     // End of variables declaration//GEN-END:variables
 }

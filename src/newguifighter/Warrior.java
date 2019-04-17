@@ -9,7 +9,7 @@ package newguifighter;
  *
  * @author arias
  */
-public class Fighter {
+public class Warrior {
     
     public static final int SHIELD_ON = 1;
     public static final int LIFE_ON = 2;
@@ -20,7 +20,7 @@ public class Fighter {
     private int life;
     private final String name;
 
-    public Fighter(String name, int shield, int attack, int life) {
+    public Warrior(String name, int shield, int attack, int life) {
         this.name = name;
         this.shield = shield;
         this.attack = attack;
