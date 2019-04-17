@@ -18,6 +18,17 @@ public class Game extends javax.swing.JFrame {
      */
     public Game() {
         initComponents();
+        DefaultListModel<Warrior> list1 = new DefaultListModel<>();
+        DefaultListModel<Warrior> list2 = new DefaultListModel<>();
+        
+        lstUnits1.setModel(list1);
+        lstUnits2.setModel(list2);
+        
+        for (int i = 0; i < 3; i++) {
+            list1.addElement(new Warrior("No Name" + (i + 1), 100, 20, 100));
+            list2.addElement(new Warrior("No Name" + (i + 1), 100, 20, 100));
+            
+        }
     }
 
     /**
@@ -290,8 +301,8 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JList<String> lstUnits1;
-    private javax.swing.JList<String> lstUnits2;
+    private javax.swing.JList<Warrior> lstUnits1;
+    private javax.swing.JList<Warrior> lstUnits2;
     private javax.swing.JPanel panArmy1;
     private javax.swing.JPanel panArmy2;
     private javax.swing.JPanel panSetup;
