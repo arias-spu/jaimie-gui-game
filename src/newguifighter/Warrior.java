@@ -29,6 +29,9 @@ public class Warrior {
 
     @Override
     public String toString() {
+        return name;
+    }
+    public String getDescription(){
         return "Fighter{" + "name=" + name + ", shield=" + shield + ", attack=" + attack + ", life=" + life + '}';
     }
 
@@ -76,5 +79,23 @@ public class Warrior {
             
         }
     }
+    /*
+    * Warriors Configuration
+    *          Shield  Attack  Life
+    * Paladin  100     70      100
+    * Fighter  70      20      100
+    * Ranger   70      20      100
+    */
+    
+    public static Warrior createPaladin(String name){
+        return new Warrior(name, 100, 70, 100);
+    }
+    public static Warrior createFighter(String name){
+        return new Warrior(name, 70, 20, 100);
+    }
+    public static Warrior createRanger(String name){
+        return new Warrior(name, 70, 20, 100);
+    }
+    
     
 }
